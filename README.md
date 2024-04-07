@@ -11,52 +11,37 @@ In the context of this program, negative value transactions are invalid. These w
 The output for the above input is as follows (Does not reflect output exactly due to GitHub's automatic formatting):
 
 STATEMENT OF ACCOUNT
-
 234987234981       J. T. Kirk & Co.   Starting Balance: 298.18
-
 
 23456   Purchase    Culvers              14.72
 
-
-Total Purchases:              14.72
-
-Total Payments:                0.00
-
-Ending Balance:              312.90
-
+Total Purchases:      14.72
+Total Payments:        0.00
+Ending Balance:      312.90
 *********************************************************
 STATEMENT OF ACCOUNT
-
 456109801804       J. L. Picard   Starting Balance: 0.0
 
-
 23460   Purchase    Sid's Lids           132.75
-
-23482   Payment     Cash                  105.0
+23482   Payment     Cash                 105.00
 
 Total Purchases:     132.75
-
 Total Payments:      105.00
-
 Ending Balance:       27.75
 *********************************************************
 STATEMENT OF ACCOUNT
-
 982340982348       Spacely Sprockets   Starting Balance: 29109.14
 
 22670   Payment     Check #11101         -20000.00 (Invalid)
-
 23458   Purchase    Peter's Plastics                  416.92
-
 23460   Payment     Credit *7234                    10000.00
-
 23472   Purchase    Mort's Metals                   17293.14
-
 23670   Payment     Check #11101                    20000.00
 
 Total Purchases:     17710.06
-
 Total Payments:      30000.00
+Ending Balance:      16819.20
+*********************************************************
 
 Ending Balance:      16819.20
 *********************************************************
