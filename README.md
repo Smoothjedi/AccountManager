@@ -43,7 +43,8 @@ Total Payments:      30000.00
 Ending Balance:      16819.20
 *********************************************************
 
-#LLM Prompts ChatGPT 3.0
+**#LLM Prompts ChatGPT 3.0**
+
 Certainly! Here are all the prompts you provided in this chat:
 
 "I'd like to use this as a filter condition on a list, but I need to turn it into a lambda. Can you help with that?"
