@@ -307,27 +307,27 @@
      (list "@{(purchase-timestamp transaction)}  "
            "Purchase   "
            (pad-column "@{(purchase-vendor transaction)}" 20 40)           
-           "@{(format-currency(purchase-amount transaction))}")]
+           "@{(format-positive-currency(purchase-amount transaction))}")]
     [(cash-payment? transaction)
      (list "@{(cash-payment-timestamp transaction)}  "
            "Payment   "
            (pad-column "Cash" 20 40)
-           "@{(cash-payment-amount transaction)}")]
+           "@{(format-positive-currency(cash-payment-amount transaction))}")]
     [(check-payment? transaction)
      (list "@{(check-payment-timestamp transaction)}  "
            "Payment   "
            (pad-column "Check #@{(check-payment-check-number transaction)}" 20 40)
-           "@{(format-currency(check-payment-amount transaction))}")]
+           "@{(format-positive-currency(check-payment-amount transaction))}")]
     [(credit-payment? transaction)
      (list "@{(credit-payment-timestamp transaction)}  "
            "Payment   "
            (pad-column "Credit *@{(last-four-characters(credit-payment-card-number transaction))}" 20 40)
-           "@{(format-currency(credit-payment-amount transaction))}")]
+           "@{(format-positive-currency(credit-payment-amount transaction))}")]
     [(debit-payment? transaction)
      (list "@{(debit-payment-timestamp transaction)}  "
            "Payment   "
            (pad-column "Debit *@{(last-four-characters(debit-payment-card-number transaction))}" 20 40)
-           "@{(format-currency(debit-payment-amount transaction))}")]
+           "@{(format-positive-currency(debit-payment-amount transaction))}")]
     [else (error "Not a transaction")]))
 
 ;; prints a list of formatted transactions as a table
@@ -359,12 +359,15 @@
   )
 
 ;; formats a number as currency by limiting decimal points
-;; also, currency can't be negative. An (Invalid) tag is appended in this case
-(define (format-currency number)
-  (if (positive? number)
-    (~r number #:precision '(= 2))
-    "@{(~r number #:precision '(= 2))} (Invalid)")
-  ) 
+(define (format-currency number)  
+    (~r number #:precision '(= 2))    
+  )
+;; Calls format-currency, but marks negatives as Invalid
+(define (format-positive-currency number)
+  (if (or (positive? number))
+          (format-currency number)
+    "@{(format-currency number)} (Invalid)")
+)
 
 ;; prints an account statement for an individual account
 (define (print-statement account transactions totals)
