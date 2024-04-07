@@ -8,7 +8,7 @@ An account has a starting balance; purchases add to this while payments deduct f
 
 In the context of this program, negative value transactions are invalid. These will be tagged as invalid in the statement results and will not contribute to the totals.
 
-The output for the above input is as follows:
+The output for the above input is as follows (Does not reflect output exactly due to GitHub's automatic formatting):
 
 STATEMENT OF ACCOUNT
 
