@@ -61,19 +61,28 @@ STATEMENT OF ACCOUNT
 23482   Payment     Cash                  105.0
 
 Total Purchases:     132.75
+
 Total Payments:      105.00
+
 Ending Balance:       27.75
 *********************************************************
 STATEMENT OF ACCOUNT
+
 982340982348       Spacely Sprockets   Starting Balance: 29109.14
 
 22670   Payment     Check #11101         -20000.00 (Invalid)
+
 23458   Purchase    Peter's Plastics                  416.92
+
 23460   Payment     Credit *7234                    10000.00
+
 23472   Purchase    Mort's Metals                   17293.14
+
 23670   Payment     Check #11101                    20000.00
 
 Total Purchases:     17710.06
+
 Total Payments:      30000.00
+
 Ending Balance:      16819.20
 *********************************************************
