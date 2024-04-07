@@ -20,7 +20,7 @@ STATEMENT OF ACCOUNT
 
 Total Purchases:              14.72
 
-Total Payments:      0.00 (Invalid)
+Total Payments:                0.00
 
 Ending Balance:              312.90
 
